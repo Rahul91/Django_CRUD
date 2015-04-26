@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+<ul>
+   <li><a href="/pincode/all">Cancel</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+
+{{ pincode.pincode }}
+
+<form action="/pincode/update/" method="POST">{% csrf_token %}
+<ul>
+{% for field in form %}
+
+{{ field.errors }}  
+{{ field.label_tag }}
+{{ field }} 
+<br>
+
+{% endfor %}
+ </ul>
+
+
+ <input type="submit" name="submit" value="Update Entry">
+ </form>
+
+ {% endblock %}

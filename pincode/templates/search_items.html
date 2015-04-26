@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+<ul>
+   <li><a href="/pincode/all">Directory</a></li>
+   <h3>Search</h3>
+
+<form action="/pincode/search/" menthod="get">
+{% csrf_token %}
+
+{% for field in form %}
+{{ field.label }}
+{{ field }}
+{% if filed.lable %}
+{% break %}
+{% endif %}
+
+
+
+<ul>
+ 	<input type="submit" name="submit" value="Search"/>
+ </form>
+   </ul>
+
+</ul>
+{% endblock %}
+
+{% block content %}
+{% for pincode in pincodes %}
+	<li><a href="/pincode/get/{{ pincode.id }}">{{ pincode.pincode }}</a></li>
+{% endfor %}
+
+<!--input type="text" name="search">
+<input type="submit" name="submit" value="Search"/-->
+
+ </ul>
+ {% endblock %}

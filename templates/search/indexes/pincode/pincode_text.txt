@@ -1,0 +1,4 @@
+{{ object.pincode }}
+{{ object.office_name }}
+{{ object.district_name }}
+{{ object.state_name }}

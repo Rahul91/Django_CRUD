@@ -1,0 +1,11 @@
+{% if pincodes.count > 0 %}
+
+{% for pincode in pincodes %}
+    <li><a href="/pincode/get/{{ pincode.id }}">{{ pincode.pincode }}</a></li>
+{% endfor %}
+
+{% else %}
+
+<li>None to show!</li>
+
+{% endif %}
