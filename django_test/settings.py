@@ -15,7 +15,7 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PROJECT_DIR = os.path.dirname(__file__)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -59,7 +59,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['/home/rahul/python/django-rahul/django_test/templates/',
                   '/home/rahul/python/django-rahul/django_test/templates/pincode',
-                  '(os.path.join(BASE_DIR, "/templates/")',
+                  os.path.join(PROJECT_DIR, "templates"),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
