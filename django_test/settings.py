@@ -59,7 +59,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['/home/rahul/python/django-rahul/django_test/templates/',
                   '/home/rahul/python/django-rahul/django_test/templates/pincode',
-                  os.path.join(PROJECT_DIR, "templates"),
+                  'app/templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
