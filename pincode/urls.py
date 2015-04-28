@@ -9,8 +9,8 @@ urlpatterns = [
 			url(r'^get/(?P<pincode_id>\d+)/$', 'pincode.views.pincode_single'),
 			url(r'^create/', 'pincode.views.create'),
 			url(r'^update/', 'pincode.views.update'),
-			url(r'^search/$', 'pincode.views.search_pincodes'),
-			url(r'^search_items/', 'pincode.views.search_items'), 
+			#url(r'^search/$', 'pincode.views.search_pincodes'),
+			#url(r'^search_items/', 'pincode.views.search_items'), 
 
 
 ]

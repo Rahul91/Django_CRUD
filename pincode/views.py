@@ -128,7 +128,7 @@ def search_items(request):
 	args.update(csrf(request))
 	args['form'] = PincodeForm()
 	return render(request,"search_items.html", args)
-'''
+
 def search_pincodes(request):
 	if request.mehod == "POST":
 		search_text = request.POST['search_text']
@@ -137,3 +137,4 @@ def search_pincodes(request):
 
 	pincodes = Pincode.objects.filter(pincode__contains=search_text)
 	return render(request, "ajax_search.html", {'pincodes' : pincodes})
+	'''
