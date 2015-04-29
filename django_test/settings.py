@@ -15,7 +15,7 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_DIR = os.path.dirname(__file__)
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -26,7 +26,7 @@ SECRET_KEY = 'bq9pv4a)eq7ic--a292_-sc4n&)zfu6&!9m)ks-27^oz=ul810'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://serene-sierra-9129.herokuapp.com']
 
 
 # Application definition
@@ -118,7 +118,7 @@ STATIC_ROOT = ' '
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-        ('assets', '/home/rahul/python/django-rahul/django_test/static')
-    )
+STATICFILES_DIRS = [
+        (os.path.join(PROJECT_DIR, 'static')),
+    ]
 
