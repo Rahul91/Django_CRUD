@@ -1,1 +1,1 @@
-web: gunicorn hello:pincode --log-file -
+web: gunicorn pincode.wsgi --log-file -
