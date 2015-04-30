@@ -60,6 +60,7 @@ TEMPLATES = [
         'DIRS': ['/home/rahul/python/django-rahul/django_test/templates/',
                   '/home/rahul/python/django-rahul/django_test/templates/pincode',
                   '/app/templates',
+                  '/app/templates/admin/css',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
